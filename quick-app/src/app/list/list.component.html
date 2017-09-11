@@ -1,0 +1,14 @@
+<img [src] = 'srcpath' style="width: 300px; height: 250px;">
+<h1>
+  {{title}}
+</h1>
+<ul *ngIf='listItems'>
+  <li *ngFor='let item of listItems' appBold>
+  {{item}}
+  </li>
+</ul>
+
+<button (click)="onSelect()">Submit</button>
+<br>
+{{user}}
+<input [(ngModel)]="user" [ngModelOptions]="{standalone: true}">
